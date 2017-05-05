@@ -13,6 +13,7 @@ function magnet_get() {
         -u 2k \
         --seed-time=0 \
         --file-allocation=none \
+        --bt-save-metadata=true \
         `cat "$magnet_get_NAME/$magnet_get_NAME.magnet"` || return $?
       touch "$magnet_get_NAME/$magnet_get_NAME.magnet.done" || return $?
     else
