@@ -5,5 +5,5 @@ function html_download_torrents() {
     $@ 2>/dev/null | \
     parallel \
       -v \
-      "aria2c --bt-save-metadata -q {}" 2>/dev/null
+      "aria2c --bt-save-metadata --seed-time=60 -q {}" 2>/dev/null
 }
