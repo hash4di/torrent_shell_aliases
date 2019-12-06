@@ -32,7 +32,7 @@ function aria2_vpn_pia() {
       -e ARIA2_SEED_TIME=0 \
       --rm -w=/mnt \
       --net="container:pia-$aria2_vpn_pia_THREAD" --volumes-from "$aria2_vpn_pia_DATA_NAME" --name "$aria2_vpn_pia_SERVICE_NAME" \
-      pr0d1r2/alpine-aria2-command:latest /usr/local/bin/aria2c --conf-path /etc/aria2/aria2.conf "$@"
+      pr0d1r2/alpine-aria2-command:latest /usr/local/bin/aria2c -j "$#" --conf-path /etc/aria2/aria2.conf "$@"
     aria2_vpn_pia_ERR="$?"
   fi
   docker rm "$aria2_vpn_pia_DATA_NAME"
