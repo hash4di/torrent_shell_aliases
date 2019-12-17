@@ -1,9 +1,7 @@
 function pia_regions() {
-  echo "
-Romania
-Brazil
-Sweden
-Germany
-Croatia
-"
+  echo Romania
+  echo Brazil
+  echo Sweden
+  echo Germany
+  echo Croatia
 }
